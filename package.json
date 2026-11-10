@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "Plantilla basado en ES",
   "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve --open",
-    "build2": "babel src -d controller --watch"
-  },
+  "homepage": "https://fatimaraglez-wq.github.io/EXAMEN",
+
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "author": "Diego",
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +20,7 @@
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "babel-loader": "^10.1.1",
+    "gh-pages": "^6.3.0",
     "webpack": "^5.112.2",
     "webpack-cli": "^7.3.1",
     "webpack-dev-server": "^6.0.0"
